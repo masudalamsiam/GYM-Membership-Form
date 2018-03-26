@@ -1,0 +1,105 @@
+#button {
+    font-size: 14px;
+    background: linear-gradient(#FFD700, #DAA520);
+    margin-top: 30px;
+    border: 50px;
+    width: 150px;
+    height: 25px;
+    border-radius: 7px;
+}
+
+fieldset {
+    background-color: #F8F8FF;
+    width: 457px;
+    height: auto;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.Fieldset2 {
+    background-color: none;
+    border: none;
+}
+
+.clom1 {
+    position: static;
+    float: left;
+    margin: 10px;
+}
+
+.clom2 {
+    position: static;
+    float: left;
+    margin: 10px;
+}
+
+input, select {
+    font-size: 15px;
+    padding: 2px;
+    padding-left: 4px;
+    border: 1px solid gray;
+    background-color: lightgray;
+    width: 205px;
+    height: 30px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+lable {
+    color: black;
+    font-family: 'Adobe Garamond Pro';
+    font-size: 17px;
+}
+
+legend {
+    color: gray;
+    font-family: 'Adobe Garamond Pro';
+    font-size: 30px;
+}
+
+lable::before {
+    content: "*";
+    color: red;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: contents;
+}
+
+.error {
+    border: 1px solid red;
+    margin-bottom: 0px;
+}
+
+select:hover {
+    border: 1px solid #1E90FF;
+}
+
+input:hover {
+    border: 1px solid #1E90FF;
+}
+
+select:focus {
+    border: 1px solid gray;
+}
+
+input:focus {
+    border: 1px solid gray;
+}
+
+.textStyle {
+    text-align: center;
+    margin: 0px;
+    color: red;
+    font-size: 12px;
+}
+
+#button {
+    position: relative;
+    left: 330px;
+}

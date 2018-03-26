@@ -1,0 +1,843 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="JavaScript2.js"></script>
+    <script src="JavaScript.js"></script>
+    <link href="StyleSheet.css" rel="stylesheet" />
+    <script>
+        function prepare() {
+            var Form = document.createElement("form");
+            Form.action = "http://www.WebsiteDevelopmentBook.com/FormEcho.php";
+            Form.method = "post";
+            Form.id = "myForm";
+            var Fildset = document.createElement("fieldset");
+            var Legend = document.createElement("legend");
+            LegendText = document.createTextNode("Member Information");
+            Legend.appendChild(LegendText);
+            Fildset.appendChild(Legend);
+            Form.appendChild(Fildset);
+            document.body.appendChild(Form);
+
+            //This is First name
+            var lineBrake = document.createElement("br");
+
+            var Div = document.createElement("DIV");
+            Div.className = "clom1";
+            Div.id = "text1"
+            Fildset.appendChild(Div);
+
+            var lable = document.createElement("lable");
+            lableText = document.createTextNode("First Name:");
+            lable.appendChild(lableText);
+            Div.appendChild(lable);
+            lable.appendChild(lineBrake);
+
+            var input = document.createElement("input");
+            input.type = "text";
+            input.placeholder = "Enter First Name"
+            input.id = "Fname";
+            input.name = "First Name";
+            Div.appendChild(input);
+
+            var P = document.createElement("p");
+            P.id = "alart1"
+            P.className = "textStyle";
+
+
+
+            //This is Last Name
+            var lineBrake = document.createElement("br");
+
+            var Div = document.createElement("DIV");
+            Div.className = "clom2";
+            Fildset.appendChild(Div);
+
+            var lable = document.createElement("lable");
+            lableText = document.createTextNode("Last Name:");
+            lable.appendChild(lableText);
+            Div.appendChild(lable);
+            lable.appendChild(lineBrake);
+
+            var input = document.createElement("input");
+            input.type = "text";
+            input.id = "Lname";
+            input.placeholder = "Enter Last Name"
+            input.name = "Last Name";
+            Div.appendChild(input);
+
+
+
+
+            //This is phone number
+            var lineBrake = document.createElement("br");
+
+            var Div = document.createElement("DIV");
+            Div.className = "clom1";
+            Fildset.appendChild(Div);
+
+            var lable = document.createElement("lable");
+            lableText = document.createTextNode("Phone number:");
+            lable.appendChild(lableText);
+            Div.appendChild(lable);
+            lable.appendChild(lineBrake);
+
+            var input = document.createElement("input");
+            input.type = "text";
+            input.id = "Pnumber";
+            input.placeholder = "Enter Phone Number"
+            input.name = "Phone Number";
+            input.maxLength = "10";
+            Div.appendChild(input);
+
+
+
+
+            //this is email address
+            var lineBrake = document.createElement("br");
+
+            var Div = document.createElement("DIV");
+            Div.className = "clom2";
+            Fildset.appendChild(Div);
+
+            var lable = document.createElement("lable");
+            lableText = document.createTextNode("Email Address:");
+            lable.appendChild(lableText);
+            Div.appendChild(lable);
+            lable.appendChild(lineBrake);
+
+            var input = document.createElement("input");
+            input.type = "text";
+            input.id = "Email";
+            input.placeholder = "Enter Email Address"
+            input.name = "Email Address";
+            Div.appendChild(input);
+
+
+
+
+            //this is Street adress
+            var lineBrake = document.createElement("br");
+
+            var Div = document.createElement("DIV");
+            Div.className = "clom1";
+            Fildset.appendChild(Div);
+
+            var lable = document.createElement("lable");
+            lableText = document.createTextNode("Street Address:");
+            lable.appendChild(lableText);
+            Div.appendChild(lable);
+            lable.appendChild(lineBrake);
+
+            var input = document.createElement("input");
+            input.type = "text";
+            input.id = "Street";
+            input.placeholder = "Enter Street Address"
+            input.name = "Street Address";
+            input.style.width = "430px";
+            Div.appendChild(input);
+
+
+
+
+            //this is City name
+            var lineBrake = document.createElement("br");
+
+            var Div = document.createElement("DIV");
+            Div.className = "clom1";
+            Fildset.appendChild(Div);
+
+            var lable = document.createElement("lable");
+            lableText = document.createTextNode("City:");
+            lable.appendChild(lableText);
+            Div.appendChild(lable);
+            lable.appendChild(lineBrake);
+
+            var input = document.createElement("input");
+            input.type = "text";
+            input.id = "City";
+            input.placeholder = "Enter City Name"
+            input.name = "City Name";
+            input.style.width = "240px";
+            Div.appendChild(input);
+
+
+
+
+            //this is State name
+            var lineBrake = document.createElement("br");
+
+            var Div = document.createElement("DIV");
+            Div.className = "clom1";
+            Fildset.appendChild(Div);
+
+            var lable = document.createElement("lable");
+            lableText = document.createTextNode("State:");
+            lable.appendChild(lableText);
+            Div.appendChild(lable);
+            lable.appendChild(lineBrake);
+
+            var select = document.createElement("select");
+            select.type = "text";
+            select.id = "State";
+            select.name = "State Name";
+            select.style.width = "105px";
+            Div.appendChild(select);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "");
+            optionText = document.createTextNode("Select One");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "AL");
+            optionText = document.createTextNode("AL");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "AK");
+            optionText = document.createTextNode("AK");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "AZ");
+            optionText = document.createTextNode("AZ");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "AR");
+            optionText = document.createTextNode("AR");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+
+
+            //this is Zip code
+            var lineBrake = document.createElement("br");
+
+            var Div = document.createElement("DIV");
+            Div.className = "clom1";
+            Fildset.appendChild(Div);
+
+            var lable = document.createElement("lable");
+            lableText = document.createTextNode("Zip:");
+            lable.appendChild(lableText);
+            Div.appendChild(lable);
+            lable.appendChild(lineBrake);
+
+            var input = document.createElement("input");
+            input.type = "text";
+            input.id = "Zip";
+            input.name = "Zip Code";
+            input.placeholder = "Code"
+            input.style.width = "50px";
+            input.maxLength = "5";
+            Div.appendChild(input);
+
+
+
+            //Billing Information Start from hear.
+            var Fildset = document.createElement("fieldset");
+            var Legend = document.createElement("legend");
+            LegendText = document.createTextNode("Billing Information");
+            Legend.appendChild(LegendText);
+            Fildset.appendChild(Legend);
+            Form.appendChild(Fildset);
+            document.body.appendChild(Form);
+
+            //This is Check Box
+            var lineBrake = document.createElement("br");
+
+            var Div = document.createElement("DIV");
+            Fildset.appendChild(Div);
+
+            var input = document.createElement("input");
+            input.type = "checkbox";
+            input.id = "box";
+            input.style.height = "auto";
+            input.style.width = "auto";
+            input.onclick = check;
+            Div.appendChild(input);
+
+            var lable = document.createElement("label");
+            lableText = document.createTextNode("Billing information is the same as Member information.");
+            lable.appendChild(lableText);
+            Div.appendChild(lable);
+            Div.appendChild(lineBrake);
+
+
+
+            //If check box is true.
+            var Div2 = document.createElement("DIV");
+            Div2.id = "check";
+            Fildset.appendChild(Div2);
+
+
+            //This is First name
+            var Div = document.createElement("DIV");
+            Div.className = "clom1";
+            Div2.appendChild(Div);
+
+            var lable = document.createElement("lable");
+            lableText = document.createTextNode("First Name:");
+            lable.appendChild(lableText);
+            Div.appendChild(lable);
+            lable.appendChild(lineBrake);
+
+            var input = document.createElement("input");
+            input.type = "text";
+            input.id = "Fname2";
+            input.placeholder = "Enter First Name"
+            input.name = "BFirst Name";
+            Div.appendChild(input);
+
+
+
+            //This is Last Name
+            var lineBrake = document.createElement("br");
+
+            var Div = document.createElement("DIV");
+            Div.className = "clom2";
+            Div2.appendChild(Div);
+
+            var lable = document.createElement("lable");
+            lableText = document.createTextNode("Last Name:");
+            lable.appendChild(lableText);
+            Div.appendChild(lable);
+            lable.appendChild(lineBrake);
+
+            var input = document.createElement("input");
+            input.type = "text";
+            input.id = "Lname2";
+            input.placeholder = "Enter Last Name"
+            input.name = "BLast Name";
+            Div.appendChild(input);
+
+
+
+
+            //This is phone number
+            var lineBrake = document.createElement("br");
+
+            var Div = document.createElement("DIV");
+            Div.className = "clom1";
+            Div2.appendChild(Div);
+
+            var lable = document.createElement("lable");
+            lableText = document.createTextNode("Phone number:");
+            lable.appendChild(lableText);
+            Div.appendChild(lable);
+            lable.appendChild(lineBrake);
+
+            var input = document.createElement("input");
+            input.type = "text";
+            input.id = "Pnumber2";
+            input.placeholder = "Enter Phone Number"
+            input.name = "BPhone Number";
+            input.maxLength = "10";
+            Div.appendChild(input);
+
+
+
+
+            //this is email address
+            var lineBrake = document.createElement("br");
+
+            var Div = document.createElement("DIV");
+            Div.className = "clom2";
+            Div2.appendChild(Div);
+
+            var lable = document.createElement("lable");
+            lableText = document.createTextNode("Email Address:");
+            lable.appendChild(lableText);
+            Div.appendChild(lable);
+            lable.appendChild(lineBrake);
+
+            var input = document.createElement("input");
+            input.type = "text";
+            input.id = "Email2";
+            input.placeholder = "Enter Email Address"
+            input.name = "BEmail Address";
+            Div.appendChild(input);
+
+
+
+
+            //this is Street adress
+            var lineBrake = document.createElement("br");
+
+            var Div = document.createElement("DIV");
+            Div.className = "clom1";
+            Div2.appendChild(Div);
+
+            var lable = document.createElement("lable");
+            lableText = document.createTextNode("Street Address:");
+            lable.appendChild(lableText);
+            Div.appendChild(lable);
+            lable.appendChild(lineBrake);
+
+            var input = document.createElement("input");
+            input.type = "text";
+            input.id = "Street2";
+            input.placeholder = "Enter Street Address"
+            input.name = "BState";
+            input.style.width = "430px";
+            Div.appendChild(input);
+
+
+
+
+            //this is City name
+            var lineBrake = document.createElement("br");
+
+            var Div = document.createElement("DIV");
+            Div.className = "clom1";
+            Div2.appendChild(Div);
+
+            var lable = document.createElement("lable");
+            lableText = document.createTextNode("City:");
+            lable.appendChild(lableText);
+            Div.appendChild(lable);
+            lable.appendChild(lineBrake);
+
+            var input = document.createElement("input");
+            input.type = "text";
+            input.id = "City2";
+            input.placeholder = "Enter City Name"
+            input.name = "BCity Name";
+            input.style.width = "240px";
+            Div.appendChild(input);
+
+
+
+
+            //this is State name
+            var lineBrake = document.createElement("br");
+
+            var Div = document.createElement("DIV");
+            Div.className = "clom1";
+            Div2.appendChild(Div);
+
+            var lable = document.createElement("lable");
+            lableText = document.createTextNode("State:");
+            lable.appendChild(lableText);
+            Div.appendChild(lable);
+            lable.appendChild(lineBrake);
+
+            var select = document.createElement("select");
+            select.type = "text";
+            select.id = "State2";
+            select.name = "BState Name";
+            select.style.width = "105px";
+            Div.appendChild(select);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "");
+            optionText = document.createTextNode("Select One");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "AL");
+            optionText = document.createTextNode("AL");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "AK");
+            optionText = document.createTextNode("AK");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "AZ");
+            optionText = document.createTextNode("AZ");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "AR");
+            optionText = document.createTextNode("AR");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+
+
+            //this is Zip code
+            var lineBrake = document.createElement("br");
+
+            var Div = document.createElement("DIV");
+            Div.className = "clom1";
+            Div2.appendChild(Div);
+
+            var lable = document.createElement("lable");
+            lableText = document.createTextNode("Zip:");
+            lable.appendChild(lableText);
+            Div.appendChild(lable);
+            lable.appendChild(lineBrake);
+
+            var input = document.createElement("input");
+            input.type = "text";
+            input.id = "Zip2";
+            input.placeholder = "Code"
+            input.name = "BZip Code";
+            input.style.width = "50px";
+            input.maxLength = "5";
+            Div.appendChild(input);
+
+
+
+
+            //This is Card Number
+            var lineBrake = document.createElement("br");
+
+            var Div = document.createElement("DIV");
+            Div.className = "clom1";
+            Fildset.appendChild(Div);
+
+            var lable = document.createElement("lable");
+            lableText = document.createTextNode("Card Number:");
+            lable.appendChild(lableText);
+            Div.appendChild(lable);
+            lable.appendChild(lineBrake);
+
+            var input = document.createElement("input");
+            input.type = "text";
+            input.id = "card";
+            input.placeholder = "Enter Your Card Number"
+            input.name = "Card Number";
+            input.style.width = "210px";
+            input.maxLength = "16";
+            Div.appendChild(input);
+
+
+
+            //This is Expiration Date
+            var lineBrake = document.createElement("br");
+
+            var Div = document.createElement("DIV");
+            Div.className = "clom2";
+            Fildset.appendChild(Div);
+
+            var lable = document.createElement("lable");
+            lableText = document.createTextNode("Expiration Date:");
+            lable.appendChild(lableText);
+            Div.appendChild(lable);
+            lable.appendChild(lineBrake);
+
+            //Month
+            var select = document.createElement("select");
+            select.type = "text";
+            select.id = "Month";
+            select.name = "Month";
+            select.style.width = "115px";
+            select.style.marginRight = "20px";
+            Div.appendChild(select);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "");
+            optionText = document.createTextNode("");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "01");
+            optionText = document.createTextNode("January");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "02");
+            optionText = document.createTextNode("February");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "03");
+            optionText = document.createTextNode("March");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "04");
+            optionText = document.createTextNode("April");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "05");
+            optionText = document.createTextNode("May");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "06");
+            optionText = document.createTextNode("June");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "07");
+            optionText = document.createTextNode("July");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "08");
+            optionText = document.createTextNode("August");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "09");
+            optionText = document.createTextNode("September");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "10");
+            optionText = document.createTextNode("October");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "11");
+            optionText = document.createTextNode("November");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "12");
+            optionText = document.createTextNode("December");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            //Date
+            var select = document.createElement("select");
+            select.type = "text";
+            select.id = "Date";
+            select.name = "Date";
+            select.style.width = "70px";
+            Div.appendChild(select);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "");
+            optionText = document.createTextNode("");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "01");
+            optionText = document.createTextNode("01");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "02");
+            optionText = document.createTextNode("02");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "03");
+            optionText = document.createTextNode("03");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "04");
+            optionText = document.createTextNode("04");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "05");
+            optionText = document.createTextNode("05");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "06");
+            optionText = document.createTextNode("06");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "07");
+            optionText = document.createTextNode("07");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "08");
+            optionText = document.createTextNode("08");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "09");
+            optionText = document.createTextNode("09");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "10");
+            optionText = document.createTextNode("10");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "11");
+            optionText = document.createTextNode("11");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "12");
+            optionText = document.createTextNode("12");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "13");
+            optionText = document.createTextNode("13");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "14");
+            optionText = document.createTextNode("14");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "15");
+            optionText = document.createTextNode("15");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "16");
+            optionText = document.createTextNode("16");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "17");
+            optionText = document.createTextNode("17");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "18");
+            optionText = document.createTextNode("18");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "19");
+            optionText = document.createTextNode("19");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "20");
+            optionText = document.createTextNode("20");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "21");
+            optionText = document.createTextNode("21");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "22");
+            optionText = document.createTextNode("22");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "23");
+            optionText = document.createTextNode("23");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "24");
+            optionText = document.createTextNode("24");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "25");
+            optionText = document.createTextNode("25");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "26");
+            optionText = document.createTextNode("26");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "27");
+            optionText = document.createTextNode("27");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "28");
+            optionText = document.createTextNode("28");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "29");
+            optionText = document.createTextNode("29");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "30");
+            optionText = document.createTextNode("30");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+            var option = document.createElement("option");
+            option.setAttribute("value", "31");
+            optionText = document.createTextNode("31");
+            select.appendChild(option);
+            option.appendChild(optionText);
+
+
+            // submit button
+            var input = document.createElement("input");
+            input.type = "button";
+            input.id = "button";
+            input.value = "Review and confirm";
+            input.className = "button";
+            input.onclick = validateForm;
+            Form.appendChild(input);
+
+
+
+
+        }
+
+        window.onload = prepare;
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
